@@ -4,7 +4,9 @@ An immersive, modern, interactive 3D web experience celebrating the iconic **Coc
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
 [![Three.js](https://img.shields.io/badge/Three.js-r128-black.svg)](https://threejs.org/)
-[![GitHub Pages Ready](https://img.shields.io/badge/Deploy-GitHub%20Pages-brightgreen.svg)](#-deploy-to-github-pages)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-brightgreen.svg)](https://vedantasakpal.github.io/cococala_frontend_dev/)
+
+🔗 **Live Website**: [https://vedantasakpal.github.io/cococala_frontend_dev/](https://vedantasakpal.github.io/cococala_frontend_dev/)
 
 ---
 
