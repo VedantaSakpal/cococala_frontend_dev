@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Coca-Cola | Real Magic — The Original. Always.</title>
+  <meta name="description" content="Experience the refreshing world of Coca-Cola with our interactive 3D can showcase, signature flavors, and iconic beverage brands.">
+  <meta name="theme-color" content="#d6000f">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coca-Cola | Real Magic — The Original. Always.">
+  <meta property="og:description" content="Experience the refreshing world of Coca-Cola with our interactive 3D can showcase, signature flavors, and iconic beverage brands.">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light';
+    } catch (e) {
+      document.documentElement.dataset.theme = 'light';
+    }
+  </script>
+</head>
+<body>
+
+  <!-- HERO SECTION WITH INTERACTIVE 3D CAN -->
+  <header class="hero" id="hero">
+    <canvas id="stage" aria-label="Interactive 3D Coca-Cola Can. Drag to rotate in 360 degrees."></canvas>
+
+    <div class="wrap">
+      <nav>
+        <a class="logo-text" href="#" aria-label="Coca-Cola Home">Coca-Cola</a>
+        <ul>
+          <li><a href="#original">The Original</a></li>
+          <li><a href="#moments">Real Moments</a></li>
+          <li><a href="#flavors">Flavors</a></li>
+          <li><a href="#brands">Our Brands ↗</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="pill" href="#flavors">Find Your Flavor ↗</a>
+          <button class="theme-toggle" id="theme" aria-label="Switch between light and dark mode">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div class="hero-copy">
+        <div class="kick">An Icon. Since 1886.</div>
+        <h1>The Original.<br>Always.</h1>
+        <p>That first crisp sip. That unmistakable refreshing taste. A little everyday moment of real magic shared across generations.</p>
+        <a class="btn-primary" href="#original">Meet The Original →</a>
+        <br>
+        <a class="more-link" href="#moments">↓ &nbsp;Discover the magic</a>
+      </div>
+    </div>
+
+    <!-- Active Variant Info Overlay -->
+    <div class="hero-info">
+      <b id="vname">Coca-Cola Original Taste</b>
+      <span>330 ml of pure, iconic refreshment.</span>
+    </div>
+
+    <!-- 3D Can Controls Rail -->
+    <div class="rail">
+      <div class="swatches" role="group" aria-label="Choose a Coca-Cola can variant">
+        <button aria-label="Original Taste" aria-pressed="true" style="background:#d5000f;"></button>
+        <button aria-label="Zero Sugar" aria-pressed="false" style="background:#141414;"></button>
+        <button aria-label="Cherry" aria-pressed="false" style="background:#7d0a1f;"></button>
+      </div>
+      <div class="ctl-buttons">
+        <button id="pause" aria-label="Pause rotation">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="4" height="12" rx="1"></rect>
+            <rect x="10" y="2" width="4" height="12" rx="1"></rect>
+          </svg>
+        </button>
+        <button id="reset" aria-label="Reset 3D view">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+            <path d="M3 3v5h5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="side-text">Nothing like the real thing</div>
+  </header>
+
+  <!-- MARQUEE TICKER -->
+  <div class="strip">
+    <div class="track">
+      <span>Real taste<i>✳</i>Real moments<i>✳</i>Real magic<i>✳</i>Always Coca-Cola<i>✳</i></span>
+      <span>Real taste<i>✳</i>Real moments<i>✳</i>Real magic<i>✳</i>Always Coca-Cola<i>✳</i></span>
+    </div>
+  </div>
+
+  <main class="sec" id="moments">
+    <!-- MOMENTS SECTION -->
+    <section class="moments">
+      <div>
+        <div class="kick" style="color:var(--red);">Better, Together</div>
+        <h2>Good moments.<br>Great company.</h2>
+        <p>The best things in life aren’t things. They’re the laughs, the catch-ups, and the spontaneous moments we share with friends and family. Just add an ice-cold Coca-Cola.</p>
+        <a class="link-arrow" href="#flavors">Find your real magic <span>↗</span></a>
+      </div>
+      <div class="panel-cheers" role="img" aria-label="Cheers illustration">Cheers!</div>
+    </section>
+
+    <!-- KEY FEATURES GRID -->
+    <section class="features-grid" aria-label="Why Coca-Cola">
+      <div>
+        <h3>Ice-Cold First Sip</h3>
+        <p>Pour it over ice or crack it straight from the fridge. Cold is when it tastes its crispest, freshest best.</p>
+      </div>
+      <div>
+        <h3>Signature Fizz</h3>
+        <p>Lively, fine-tuned bubbles and a bright finish that awaken your senses with every refreshing sip.</p>
+      </div>
+      <div>
+        <h3>Always The Same</h3>
+        <p>A trusted formula enjoyed worldwide since 1886. The classic flavor you know and celebrate, every time.</p>
+      </div>
+    </section>
+
+    <!-- FLAVOR PICKER SHOWCASE -->
+    <section class="flv" id="flavors" aria-label="Flavors">
+      <div>
+        <div class="kick">Pick Your Flavor</div>
+        <h2 id="fn">Original Taste</h2>
+        <p id="fd">The taste that started it all. Crisp, fizzy, and unmistakably Coca-Cola.</p>
+        
+        <div class="meter-group">
+          <div><span>Fizz</span><b><i style="width:95%;"></i></b></div>
+          <div><span>Sweetness</span><b><i style="width:75%;"></i></b></div>
+          <div><span>Boldness</span><b><i style="width:65%;"></i></b></div>
+        </div>
+
+        <div class="tabs-group">
+          <button aria-pressed="true">Original</button>
+          <button aria-pressed="false">Zero Sugar</button>
+          <button aria-pressed="false">Cherry</button>
+        </div>
+      </div>
+
+      <div class="can-preview-container" aria-hidden="true">
+        <div class="can-graphic"><span id="cl">Coca-Cola</span></div>
+      </div>
+    </section>
+
+    <!-- EXPLORE OUR BRANDS -->
+    <section class="brands" id="brands">
+      <div class="brands-header">
+        <div>
+          <h2>Explore our brands</h2>
+          <p>From the original icon to everyday favorites, there’s an uplifting drink for every mood and moment.</p>
+        </div>
+        <a class="view-all-btn" href="#flavors">View all <span>→</span></a>
+      </div>
+
+      <div class="brands-grid">
+        <!-- Coca-Cola -->
+        <a class="brand-card" href="#hero" style="--card-bg:#e41e2b; --card-text:#ffffff;">
+          <div class="brand-title script">Coca-Cola</div>
+          <small>Original taste <i>↗</i></small>
+        </a>
+
+        <!-- Sprite -->
+        <a class="brand-card" href="#moments" style="--card-bg:#109648; --card-text:#ffffff;">
+          <div class="brand-title">Sprite</div>
+          <small>Crisp lemon-lime <i>↗</i></small>
+        </a>
+
+        <!-- Thums Up -->
+        <a class="brand-card light-card" href="#moments" style="--card-bg:#ffffff; --card-text:#0f1c3f; border: 1px solid var(--line);">
+          <div class="brand-title" style="color:#0f1c3f;">Thums Up</div>
+          <small>Strong, bold taste <i>↗</i></small>
+        </a>
+
+        <!-- Limca -->
+        <a class="brand-card" href="#moments" style="--card-bg:#72be44; --card-text:#ffffff;">
+          <div class="brand-title">Limca</div>
+          <small>Lemon & lime zing <i>↗</i></small>
+        </a>
+
+        <!-- Fanta -->
+        <a class="brand-card" href="#moments" style="--card-bg:#f37021; --card-text:#ffffff;">
+          <div class="brand-title">Fanta</div>
+          <small>Bright orange fizz <i>↗</i></small>
+        </a>
+
+        <!-- Maaza -->
+        <a class="brand-card light-card" href="#moments" style="--card-bg:#ffffff; --card-text:#8f2d14; border: 1px solid var(--line);">
+          <div class="brand-title script" style="color:#e68100;">Maaza</div>
+          <small>Rich mango juice <i>↗</i></small>
+        </a>
+      </div>
+    </section>
+
+    <!-- HERITAGE & STATS -->
+    <section class="orig" id="original">
+      <div>
+        <h2>One unmistakable original.</h2>
+        <p>The iconic red. The signature fizz. The taste you know and love. Some classic things never go out of style.</p>
+        <a class="link-arrow" href="#hero">Explore the can <span>→</span></a>
+      </div>
+      <div class="stats-group">
+        <div>
+          <small>The Taste</small>
+          <b>Original</b>
+        </div>
+        <div>
+          <small>The Can</small>
+          <b>330 ml</b>
+        </div>
+        <div>
+          <small>The Feeling</small>
+          <b>Real Magic</b>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SIGNUP -->
+    <section class="join">
+      <div>
+        <h2>Get a little real magic.</h2>
+        <p>Good moments, refreshers, and brand experiences delivered straight to your inbox.</p>
+      </div>
+      <form id="jf">
+        <label class="sr-only" for="em">Email address</label>
+        <input id="em" type="email" required placeholder="you@email.com" autocomplete="email">
+        <button class="btn-submit" type="submit">Sign me up</button>
+        <p id="jm" role="status"></p>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="footer-logo">Coca-Cola</span>
+      <small>© 2026 The Coca-Cola Experience. Designed for GitHub Pages & modern web showcase.</small>
+    </footer>
+  </main>
+
+  <!-- Three.js Library CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- 3D Can Experience Script -->
+  <script src="js/can-3d.js"></script>
+  <!-- Main Interactivity Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
